@@ -1,0 +1,10 @@
+<h2>Job Listings</h2>
+<form method="get" action="{% url 'job_list' %}">
+    <input type="text" name="q" placeholder="Search jobs...">
+    <button type="submit">Search</button>
+</form>
+<ul>
+    {% for job in jobs %}
+        <li>{{ job.title }} at {{ job.company }} - {{ job.location }} <a href="{% url 'apply' job.id %}">Apply</a></li>
+    {% endfor %}
+</ul>

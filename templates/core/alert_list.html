@@ -1,0 +1,6 @@
+<h2>Your Job Alerts</h2>
+<ul>
+    {% for alert in alerts %}
+        <li>Keyword: {{ alert.keyword }}, Location: {{ alert.location }}, Frequency: {{ alert.frequency }}</li>
+    {% endfor %}
+</ul>
